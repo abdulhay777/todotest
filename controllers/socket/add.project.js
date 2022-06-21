@@ -8,6 +8,8 @@ module.exports = function (socket, io) {
 
             const name = data.name
             const id = data._id
+            
+            console.log(data)
     
             if (!name) {
                 io.to(socket.decoded_token.id).emit('OUT_Message', {
